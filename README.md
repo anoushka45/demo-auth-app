@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# React Sign-Up and Login Forms with Formik (Next.js)
 
-First, run the development server:
+This application features **Sign Up** and **Login** forms using Formik for form handling and validation. It includes features like password strength indicators and "Remember Me" functionality.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Sign Up Form**: Email, password, and confirm password fields with a password strength indicator.
+- **Login Form**: Email and password fields with a "Remember Me" checkbox to store email in `localStorage`.
+- **Success Messages**: Displays "Sign Up Successful" or "Login Successful" upon successful submission.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js (v14 or above)
 
-To learn more about Next.js, take a look at the following resources:
+### Steps to Run
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/your-username/nextjs-signup-login-forms.git
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd nextjs-signup-login-forms
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   Visit `http://localhost:3000` in your browser.
+
+## Design Choices
+
+- **Formik**: Used for handling form state and validation with Yup for schema validation.
+- **TypeScript**: Ensures type safety and better development experience.
+- **No Third-Party UI Libraries**: Basic HTML elements and Tailwind CSS for styling.
+- **Password Strength Indicator**: Provides feedback on password strength in the Sign Up form.
+
+## Assumptions & Limitations
+
+- No backend or session management is implemented. Forms are simulated on the frontend.
+- The "Remember Me" stores the email only in `localStorage`.
+- Basic password strength validation is implemented.
+
+
